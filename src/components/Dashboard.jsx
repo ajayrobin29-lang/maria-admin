@@ -39,33 +39,33 @@ export default function Dashboard({data}) {
             <li onClick={() => setFilterBy('')} role="tab"
               className={`${filterBy === ''? 'bg-neutral-200' : 'bg-white'} hover:bg-neutral-300 relative flex items-center justify-center w-full min-w-32 h-full border border-neutral-500 px-1 py-1 font-sans text-base antialiased font-normal leading-relaxed text-center rounded-md cursor-pointer select-none text-blue-gray-900`}
               data-value="all">
-              <div className="z-20 text-inherit flex flex-row justify-center gap-4 items-center">
-                <p className = "p-0.5 min-w-24">&nbsp;&nbsp;All&nbsp;&nbsp;</p>
-                <p className="font-bold bg-neutral-800 rounded-lg text-white py-0.5 px-2.5">{data.length}</p>
+              <div className="z-20 text-inherit flex flex-row justify-between w-full px-1 items-center">
+                <div className = "p-0.5">All</div>
+                <div className="font-bold bg-neutral-800 rounded-lg text-white py-0.5 px-2.5">{data.length}</div>
               </div>
             </li>
             <li onClick={() => setFilterBy('New')} role="tab"
               className={`${filterBy === 'New'? 'bg-neutral-200' : 'bg-white'} hover:bg-neutral-300 relative flex items-center justify-center w-full min-w-32 h-full border border-neutral-500 px-1 py-1 font-sans text-base rounded-md antialiased font-normal leading-relaxed text-center cursor-pointer select-none`}
               data-value="monitored">
-              <div className="z-20 text-inherit flex flex-row justify-center gap-4 items-center">
-                <p className = "p-0.5 min-w-24">&nbsp;&nbsp;New&nbsp;&nbsp;</p>
-                <p className="font-bold bg-neutral-800 rounded-lg text-white py-0.5 px-2.5">{data.filter(item => item.status === 'New').length}</p>
+              <div className="z-20 text-inherit flex flex-row justify-between w-full px-1 items-center">
+                <div className = "p-0.5">New</div>
+                <div className="font-bold bg-neutral-800 rounded-lg text-white py-0.5 px-2.5">{data.filter(item => item.status === 'New').length}</div>
               </div>
             </li>
             <li onClick={() => setFilterBy('Pending')} role="tab"
               className={`${filterBy === 'Pending'? 'bg-neutral-200' : 'bg-white'} hover:bg-neutral-300 relative flex items-center justify-center w-full min-w-32 h-full border border-neutral-500 px-1 py-1 font-sans text-base rounded-md antialiased font-normal leading-relaxed text-center cursor-pointer select-none`}
               data-value="unmonitored">
-              <div className="z-20 text-inherit flex flex-row justify-center gap-4 items-center">
-                <p className = "p-0.5 min-w-24">&nbsp;&nbsp;Pending&nbsp;&nbsp;</p>
-                <p className="font-bold bg-neutral-800 rounded-lg text-white py-0.5 px-2.5">{data.filter(item => item.status === 'Pending').length}</p>
+              <div className="z-20 text-inherit flex flex-row justify-between w-full px-1 items-center">
+                <div className = "p-0.5">Pending</div>
+                <div className="font-bold bg-neutral-800 rounded-lg text-white py-0.5 px-2.5">{data.filter(item => item.status === 'Pending').length}</div>
               </div>
             </li>
             <li onClick={() => setFilterBy('Success')} role="tab"
               className={`${filterBy === 'Success'? 'bg-neutral-200' : 'bg-white'} hover:bg-neutral-300 relative flex items-center justify-center w-full min-w-32 h-full border border-neutral-500 px-1 py-1 font-sans text-base rounded-md antialiased font-normal leading-relaxed text-center cursor-pointer select-none`}
               data-value="unmonitored">
-              <div className="z-20 text-inherit flex flex-row justify-center gap-4 items-center">
-                <p className = "p-0.5 min-w-24">&nbsp;&nbsp;Success&nbsp;&nbsp;</p>
-                <p className="font-bold bg-neutral-800 rounded-lg text-white py-0.5 px-2.5">{data.filter(item => item.status === 'Success').length}</p>
+              <div className="z-20 text-inherit flex flex-row justify-between w-full px-1 items-center">
+                <div className = "p-0.5">&nbsp;&nbsp;Success&nbsp;&nbsp;</div>
+                <div className="font-bold bg-neutral-800 rounded-lg text-white py-0.5 px-2.5">{data.filter(item => item.status === 'Success').length}</div>
               </div>
             </li>
           </ul>
