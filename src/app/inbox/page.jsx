@@ -34,10 +34,10 @@ const sendMessage = (e) => {
 
 
   return (
-    <div className="flex h-screen">
+    <div className="flex h-screen w-full">
       {/* Sidebar */}
-      <div className="basis-1/4 border-r overflow-y-auto ">
-        <h2 className="p-4 text-xl font-semibold bg-primary-500 text-neutral-800">
+      <div className="basis-2/4 border-r overflow-y-auto ">
+        <h2 className="p-4 text-xl font-semibold bg-neutral-800 text-neutral-200">
           Users
         </h2>
         <div className="p-2 space-y-2">
@@ -66,7 +66,7 @@ const sendMessage = (e) => {
 
       {/* Chat view */}
       <div className="basis-2/4 flex flex-col border-r justify-between ">
-        <div className="p-4 bg-primary-500 text-neutral-800">
+        <div className="p-4 bg-neutral-800 text-neutral-200">
           <h2 className="text-lg font-semibold">
             {selectedUser ? `Chat with ${selectedUser}` : "Select a user"}
           </h2>
@@ -100,12 +100,6 @@ const sendMessage = (e) => {
           </button>
         </form>
 }
-      </div>
-
-      <div className="w-full">
-        <div className="p-4 border-r bg-primary-500 text-neutral-800">
-        <h2 className="text-lg font-semibold">Utility</h2>
-        </div>
       </div>
     </div>
   );
